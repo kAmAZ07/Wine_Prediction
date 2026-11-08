@@ -266,10 +266,10 @@ def show_coefficients(model, features):
     positive = coefficients[coefficients > 0].nlargest(3)
     negative = coefficients[coefficients < 0].nsmallest(3)
 
-    st.write('Сильнее всего голосуют за хорошее вино: ' + ', '.join(
+    st.write('Сильнее всего влияют за хорошее вино: ' + ', '.join(
         FEATURE_NAMES[name].lower() for name in positive.index
     ) + '.')
-    st.write('Сильнее всего голосуют против: ' + ', '.join(
+    st.write('Сильнее всего влияют против: ' + ', '.join(
         FEATURE_NAMES[name].lower() for name in negative.index
     ) + '.')
     st.write(
